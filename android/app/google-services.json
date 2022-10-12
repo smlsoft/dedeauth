@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "748302077444",
+    "project_id": "thai7-5d3ee",
+    "storage_bucket": "thai7-5d3ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748302077444:android:5050f4b293f9405c43ef51",
+        "android_client_info": {
+          "package_name": "com.smlsoft.dedeauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748302077444-a4kjdet4snan074uncjemjothrknp73o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smlsoft.dedeauth",
+            "certificate_hash": "a1a15decc60eb0084b3efd4e832cd3fc7ff1a644"
+          }
+        },
+        {
+          "client_id": "748302077444-18p5p0vq50dnaf5e05gq2oe17kseqq83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWC-G2mVfqE1IN7QYgyFONfB05wvi8Xho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748302077444-18p5p0vq50dnaf5e05gq2oe17kseqq83.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "748302077444-ra44o1tjsmhbbglpos38s4kq4df20nhh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smlsoft.thai7merchant"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748302077444:android:adf2cd672487d90b43ef51",
+        "android_client_info": {
+          "package_name": "com.smlsoft.thai7merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748302077444-i608cdt8s2rus12vb6vtq9kb543088pf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smlsoft.thai7merchant",
+            "certificate_hash": "fc08f939c50456ec90a4888dd1763af0012932db"
+          }
+        },
+        {
+          "client_id": "748302077444-m76jvvjelc487r4t7rla96hc0g293675.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smlsoft.thai7merchant",
+            "certificate_hash": "a1a15decc60eb0084b3efd4e832cd3fc7ff1a644"
+          }
+        },
+        {
+          "client_id": "748302077444-18p5p0vq50dnaf5e05gq2oe17kseqq83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWC-G2mVfqE1IN7QYgyFONfB05wvi8Xho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748302077444-18p5p0vq50dnaf5e05gq2oe17kseqq83.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "748302077444-ra44o1tjsmhbbglpos38s4kq4df20nhh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smlsoft.thai7merchant"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
