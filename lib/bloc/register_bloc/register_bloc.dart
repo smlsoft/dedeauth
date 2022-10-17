@@ -1,42 +1,43 @@
 import 'package:bloc/bloc.dart';
+import 'package:dedeauth/struct/register.dart';
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:dedeauth/repositories/user_repository.dart';
-import 'package:dedeauth/struct/userlogin.dart';
 
 part 'register_event.dart';
 part 'register_state.dart';
 
-class LoginBloc extends Bloc<LoginEvent, LoginState> {
+class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final UserRepository _userRepository;
 
-  LoginBloc({required UserRepository userRepository})
+  RegisterBloc({required UserRepository userRepository})
       : _userRepository = userRepository,
-        super(LoginInitial()) {
-    on<LoginOnLoad>(_onLoginLoad);
+        super(RegisterInitial()) {
+    on<RegisterOnLoad>(_onRegisterLoad);
   }
 
-  void _onLoginLoad(LoginOnLoad event, Emitter<LoginState> emit) async {
-    emit(LoginInProgress());
+  void _onRegisterLoad(
+      RegisterOnLoad event, Emitter<RegisterState> emit) async {
+    emit(RegisterInProgress());
     try {
       final _result =
           await _userRepository.authenUser(event.userName, event.passWord);
 
       if (_result.success) {
         final appConfig = GetStorage("AppConfig");
-        UserLogin userLogin =
-            UserLogin(userName: event.userName, token: _result.data["token"]);
+        Register userRegister =
+            Register(email: event.userName, password: _result.data["token"]);
         appConfig.write("token", _result.data["token"]);
-        emit(LoginSuccess(userLogin: userLogin));
+        emit(RegisterSuccess(register: userRegister));
       } else {
-        emit(LoginFailed(message: 'User Not Found'));
+        emit(RegisterFailed(message: 'User Not Found'));
       }
     } on Exception catch (exception) {
-      emit(LoginFailed(
-          message: 'ติดต่อ Server ไม่ได้ : ' + exception.toString()));
+      emit(RegisterFailed(
+          message: 'ลงทะเบียนไม่สำเร็จ : ' + exception.toString()));
     } catch (e) {
-      emit(LoginFailed(message: 'ติดต่อ Server ไม่ได้ : ' + e.toString()));
+      emit(RegisterFailed(message: 'ลงทะเบียนไม่สำเร็จ : ' + e.toString()));
     }
   }
 }
