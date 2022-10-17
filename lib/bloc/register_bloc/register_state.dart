@@ -1,30 +1,30 @@
 part of 'register_bloc.dart';
 
-abstract class LoginState extends Equatable {
-  const LoginState();
+abstract class RegisterState extends Equatable {
+  const RegisterState();
 
   @override
   List<Object> get props => [];
 }
 
-class LoginInitial extends LoginState {}
+class RegisterInitial extends RegisterState {}
 
-class LoginInProgress extends LoginState {}
+class RegisterInProgress extends RegisterState {}
 
-class LoginSuccess extends LoginState {
-  UserLogin userLogin;
+class RegisterSuccess extends RegisterState {
+  Register register;
 
-  LoginSuccess({
-    required this.userLogin,
+  RegisterSuccess({
+    required this.register,
   });
 
   @override
-  List<Object> get props => [userLogin];
+  List<Object> get props => [register];
 }
 
-class LoginFailed extends LoginState {
+class RegisterFailed extends RegisterState {
   final String message;
-  LoginFailed({
+  RegisterFailed({
     required this.message,
   });
 
